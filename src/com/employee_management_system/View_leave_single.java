@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class View_leave_single extends JFrame{
 	JTable t;
-	String x[]= {"Employee ID","Name","Name","Email","Start Date","End Date","Reason","Apply Date"};
+	String x[]= {"Employee ID","Name","Email","Start Date","End Date","Reason","Apply Date"};
 	String y[][]= new String[20][7];
 	int i=0,j=0;
 	Font f,f1;
@@ -29,13 +29,13 @@ public class View_leave_single extends JFrame{
 				while(rest.next()) {
 				count++;
 
-					y[i][j++]=rest.getString("Eid");
-					y[i][j++]=rest.getString("name");
-					y[i][j++]=rest.getString("Email");
-					y[i][j++]=rest.getString("Start_date");
-					y[i][j++]=rest.getString("End_date");
-					y[i][j++]=rest.getString("Reason");
-					y[i][j++]=rest.getString("Apply Date");
+				y[i][j++]=rest.getString("eid");
+				y[i][j++]=rest.getString("name");
+				y[i][j++]=rest.getString("email");
+				y[i][j++]=rest.getString("start_date");
+				y[i][j++]=rest.getString("end_date");
+				y[i][j++]=rest.getString("reason");
+				y[i][j++]=rest.getString("apply_date");
 					
 					i++;
 					j=0;

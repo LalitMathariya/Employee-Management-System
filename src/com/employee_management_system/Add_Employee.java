@@ -162,6 +162,9 @@ public class Add_Employee extends JFrame implements ActionListener {
 		b1.setBounds(480,500,180,40);
 		id.add(b1);
 		
+		b.addActionListener(this);
+		b1.addActionListener(this);
+		
 		f.setVisible(true);
 		f.setSize(900,600);
 		f.setLocation(300,100);
@@ -190,9 +193,15 @@ public class Add_Employee extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null,"Details successfully inserted");
 				f.setVisible(false);
 				new HomePage();
-			} catch(Exception ex) {
+			}
+			
+			catch(Exception ex) {
 				System.out.println("the error is:"+ex);				
 			}
+		}
+		if(e.getSource()==b1) {
+			f.setVisible(false);
+			new HomePage();
 		}
 		
 	}

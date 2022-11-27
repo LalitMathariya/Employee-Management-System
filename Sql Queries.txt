@@ -1,0 +1,48 @@
+# Step 1 --> database creation
+
+
+create database empdb;
+use empdb;
+
+
+
+
+#Step 2 --> Home page Logindata  tabale Creation 
+
+create table logindata(username varchar(50), password varchar(50));
+insert into logindata(username , password) values("admin", "admin");
+
+
+
+
+
+#Step 3 --> New Employee table creation for adding data in database 
+
+create table employee (name varchar(50),fname varchar(50),age varchar(50),dob varchar(50),address varchar(50),
+phone varchar(50),email varchar(50),education varchar(50),job_post varchar(50),adhar varchar(50),Eid varchar(50));
+
+
+
+
+
+
+#Step 4 --> Add timesheet table creation
+
+create table attendence(Eid varchar(30),name varchar(50),email varchar(50), first_half varchar(50) , second_half varchar(30) , day_date varchar(40));
+
+
+
+
+
+#Step 5 --> Apply leave table creation
+
+create table apply_leave(Eid varchar(30) , name varchar(40), email varchar(35), start_date varchar(50) , end_date varchar(50) , 
+reason varchar(150), apply_date varchar(50));
+
+
+
+
+#Step 6 ----> Salary table creation
+
+create table salary(Sid int primary key not null auto_increment , Eid varchar(10), name varchar(50), 
+email varchar(50),hra float, da float, mid float,pf float, basic float, month_year varchar(50) unique);

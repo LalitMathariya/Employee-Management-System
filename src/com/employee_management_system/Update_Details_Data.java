@@ -59,6 +59,39 @@ public class Update_Details_Data extends JFrame implements ActionListener {
 		tf9 = new JTextField();
 		tf10 = new JTextField();
 		
+		bt1 = new JButton("Update Details");
+		bt2 = new JButton("Back");
+		
+		l1.setHorizontalAlignment(JLabel.CENTER);
+		
+		bt1.addActionListener(this);
+		bt2.addActionListener(this);
+		
+		l1.setFont(f);
+		l2.setFont(f1);
+		l3.setFont(f1);
+		l4.setFont(f1);
+		l5.setFont(f1);
+		l6.setFont(f1);
+		l7.setFont(f1);
+		l8.setFont(f1);
+		l9.setFont(f1);
+		l10.setFont(f1);
+		l11.setFont(f1);
+		l12.setFont(f1);
+		ch.setFont(f1);
+		
+		tf1.setFont(f1);
+		tf2.setFont(f1);
+		tf3.setFont(f1);
+		tf4.setFont(f1);
+		tf5.setFont(f1);
+		tf6.setFont(f1);
+		tf7.setFont(f1);
+		tf8.setFont(f1);
+		tf9.setFont(f1);
+		tf10.setFont(f1);
+		
 		bt1.setFont(f1);
 		bt2.setFont(f1);
 		
@@ -67,6 +100,7 @@ public class Update_Details_Data extends JFrame implements ActionListener {
 		
 		bt1.setForeground(Color.WHITE);
 		bt2.setForeground(Color.WHITE );
+		
 		
 		p1 = new JPanel();
 		p1.setLayout(new GridLayout(1,1,10,10));
@@ -102,7 +136,7 @@ public class Update_Details_Data extends JFrame implements ActionListener {
 		p3.setLayout(new GridLayout(1,1,10,10));
 		
 		ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("com/employee_management_system/icons/HomePage.jpg"));
-		Image img1 = img.getImage().getScaledInstance(1550,800,Image.SCALE_DEFAULT);
+		Image img1 = img.getImage().getScaledInstance(400,600,Image.SCALE_DEFAULT);
 		ImageIcon ic1 = new ImageIcon(img1);
 		l13 = new JLabel(ic1);
 		

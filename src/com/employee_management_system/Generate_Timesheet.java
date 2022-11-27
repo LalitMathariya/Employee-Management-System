@@ -26,14 +26,14 @@ public class Generate_Timesheet extends JFrame implements ActionListener {
 		
 		try {
 			ConnectionClass obj = new ConnectionClass();
-			String q="Select * from Emp_Timesheet";
+			String q="Select * from attendence";
 			ResultSet rest = obj.stm.executeQuery(q);
 			while(rest.next()) {
 				y[i][j++]=rest.getString("Eid");
 				y[i][j++]=rest.getString("name");
 				y[i][j++]=rest.getString("Email");
-				y[i][j++]=rest.getString("first_name");
-				y[i][j++]=rest.getString("second_name");
+				y[i][j++]=rest.getString("first_half");
+				y[i][j++]=rest.getString("second_half");
 				y[i][j++]=rest.getString("day_date");
 				i++;
 				j=0;

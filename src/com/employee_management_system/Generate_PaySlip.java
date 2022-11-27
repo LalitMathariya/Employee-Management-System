@@ -113,16 +113,17 @@ public class Generate_PaySlip extends JFrame implements ActionListener{
 				ConnectionClass obj1 = new ConnectionClass();
 				String id = ch1.getSelectedItem();
 				String month_year = ch2.getSelectedItem();
-				String q1 = "Select * form employee where Eid ='"+id+"'";
+				String q1 = "Select * from employee where Eid ='"+id+"'";				
 				ResultSet rest1 = obj1.stm.executeQuery(q1);
 				while(rest1.next()) {
-					ta.append("\n\nEmployee id : "+Integer.parseInt(rest1.getString("id")));
+					ta.append("\n\nEmployee id : "+Integer.parseInt(rest1.getString("Eid"))); ///////
 					ta.append("\nEmployee Name :"+rest1.getString("name"));
 					ta.append("\nEmployee Email : "+rest1.getString("email"));
 					ta.append("\n-----------------------------------\n\n");
 				}
 				
-				String q2 = "Select * form salary where month_year ='"+month_year+"' and Eid='"+id+"'";
+				String q2 = "Select * from salary where month_year ='"  + month_year +"' and Eid='"+id+"'";
+				
 				ResultSet rest2 = obj1.stm.executeQuery(q2);
 				if(rest2.next()==false) {
 					ta.append("\n-----------------------------------\n\n");
@@ -155,6 +156,9 @@ public class Generate_PaySlip extends JFrame implements ActionListener{
 			JOptionPane.showMessageDialog(null,"Are you Sure");
 			setVisible(false);
 		}
+	}
+	public static void main(String [] args) {
+		new Generate_PaySlip().setVisible(true);
 	}
 }
 

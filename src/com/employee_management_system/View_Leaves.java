@@ -11,7 +11,7 @@ public class View_Leaves extends JFrame implements ActionListener{
 	JButton bt1;
 	JTextField tf1;
 	JPanel p1,p2,p3;
-	String x[]= {"Employee ID","Name","Name","Email","Start Date","End Date","Reason","Apply Date"};
+	String x[]= {"Employee ID","Name","Email","Start Date","End Date","Reason","Apply Date"};
 	String y[][]= new String[20][7];
 	int i=0,j=0;
 	Font f,f1;
@@ -30,13 +30,13 @@ public class View_Leaves extends JFrame implements ActionListener{
 			ResultSet rest = obj.stm.executeQuery(q);
 			while(rest.next()) {
 				
-				y[i][j++]=rest.getString("Eid");
+				y[i][j++]=rest.getString("eid");
 				y[i][j++]=rest.getString("name");
-				y[i][j++]=rest.getString("Email");
-				y[i][j++]=rest.getString("Start_date");
-				y[i][j++]=rest.getString("End_date");
-				y[i][j++]=rest.getString("Reason");
-				y[i][j++]=rest.getString("Apply Date");
+				y[i][j++]=rest.getString("email");
+				y[i][j++]=rest.getString("start_date");
+				y[i][j++]=rest.getString("end_date");
+				y[i][j++]=rest.getString("reason");
+				y[i][j++]=rest.getString("apply_date");
 				
 				i++;
 				j=0;
@@ -91,7 +91,7 @@ public class View_Leaves extends JFrame implements ActionListener{
 		p2.setBackground(Color.BLACK);
 		p3.setBackground(Color.BLACK);
 		
-		add(p3,"S outh");
+		add(p3,"South");
 		add(js);
 	}
 	

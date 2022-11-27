@@ -92,7 +92,7 @@ public class Salary extends JFrame implements ActionListener
 		l8.setFont(f);
 		l9.setFont(f);
 		l10.setFont(f);
-		l11.setFont(f);
+	
 		l12.setFont(f);
 		
 		ch1.setFont(f);
@@ -119,8 +119,9 @@ public class Salary extends JFrame implements ActionListener
 		t2.setEditable(false);
 		
 		ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("com/employee_management_system/icons/HomePage.jpg"));
-		Image image = img.getImage().getScaledInstance(1550,800,Image.SCALE_DEFAULT);
+		Image image = img.getImage().getScaledInstance(400,600,Image.SCALE_DEFAULT);
 		ImageIcon img2 = new ImageIcon(image);
+		
 		l11 = new JLabel(img2);
 		
 		bt1 = new JButton("Submit");
@@ -167,9 +168,6 @@ public class Salary extends JFrame implements ActionListener
 		p2.setLayout(new GridLayout(1,1,10,10));
 		p2.add(l11);
 		
-		
-		p2.add(bt1);
-		p2.add(bt2);
 		
 		p3 = new JPanel();
 		p3.setLayout(new GridLayout(1,1,10,10));

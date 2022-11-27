@@ -33,8 +33,8 @@ public class Generate_Timesheet_single extends JFrame
 				y[i][j++]=rest.getString("Eid");
 				y[i][j++]=rest.getString("name");
 				y[i][j++]=rest.getString("Email");
-				y[i][j++]=rest.getString("first_name");
-				y[i][j++]=rest.getString("second_name");
+				y[i][j++]=rest.getString("first_half");
+				y[i][j++]=rest.getString("second_half");
 				y[i][j++]=rest.getString("day_date");
 				i++;
 				j=0;

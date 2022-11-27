@@ -121,6 +121,17 @@ public class HomePage extends JFrame implements ActionListener {
 		ment10.setForeground(Color.BLACK);
 		ment11.setForeground(Color.BLACK);
 		
+		ment1.addActionListener(this);
+		ment2.addActionListener(this);
+		ment3.addActionListener(this);
+		ment4.addActionListener(this);
+		ment5.addActionListener(this);
+		ment6.addActionListener(this);
+		ment7.addActionListener(this);
+		ment8.addActionListener(this);
+		ment9.addActionListener(this);
+		ment10.addActionListener(this);
+		ment11.addActionListener(this);
 		
 		setJMenuBar(m1);
 		add(l1);
@@ -128,10 +139,10 @@ public class HomePage extends JFrame implements ActionListener {
 
 	
 	public void actionPerformed(ActionEvent e) {
+		
 		String comnd = e.getActionCommand();
 		if(comnd.equals("Complete Profile"))
 		{
-			
 			new Add_Employee();			
 		}
 		else if(comnd.equals("View Profile"))
@@ -148,7 +159,7 @@ public class HomePage extends JFrame implements ActionListener {
 		}
 		else if(comnd.equals("View Attendence")) 
 		{
-			new addTimesheet().setVisible(true);
+			new Generate_Timesheet().setVisible(true);
 		}
 		else if(comnd.equals("Apply Leave")) 
 		{

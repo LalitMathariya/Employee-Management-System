@@ -75,10 +75,10 @@ public class addTimesheet extends JFrame implements ActionListener
 	  
 	  try {
 		  ConnectionClass obj = new ConnectionClass();
-		  String q = "Select sapIDStr from employee";
+		  String q = "Select Eid from employee";
 		  ResultSet rest = obj.stm.executeQuery(q);
 		  while(rest.next()) {
-			  c1.add(rest.getString("sapIDStr"));
+			  c1.add(rest.getString("Eid"));
 		  }
 	  }
 	  catch(Exception ev) {
@@ -110,7 +110,7 @@ public class addTimesheet extends JFrame implements ActionListener
 			  try {
 				  ConnectionClass obj2 = new ConnectionClass();
 				  String eid = c1.getSelectedItem();
-				  String q2 = "select * from employee where sapIDStr = '"+eid+"'";
+				  String q2 = "select * from employee where Eid = '"+eid+"'";
 				  ResultSet rest1 = obj2.stm.executeQuery(q2);
 				  while(rest1.next()){
 					  tf1.setText(rest1.getString("name"));
@@ -136,7 +136,7 @@ public class addTimesheet extends JFrame implements ActionListener
 		  
 		  try {
 			  ConnectionClass obj1= new ConnectionClass();
-			  String q1 = "Insert into attendence values ('"+ch_eid+"','"+name+"','"+email+"','"+ch_first_half+"','"+ch_second_half+"','"+dt+"','";
+			  String q1 = "Insert into attendence values ('"+ch_eid+"','"+name+"','"+email+"','"+ch_first_half+"','"+ch_second_half+"','"+dt+"')";
 			  obj1.stm.executeUpdate(q1);
 			  JOptionPane.showMessageDialog(null, "Data inserted");
 			  setVisible(false);
@@ -158,14 +158,6 @@ public class addTimesheet extends JFrame implements ActionListener
 }
 
 
-//Database Queries
 
-/*
- * create table Emp_Timesheet(Eid varchar(30), name varchar(50),email varchar(50),first_half varchar(30),second_half varchar(30), day_date varchar(50)); 
- * 
- * 
- * 
- * 
- * */
 
 

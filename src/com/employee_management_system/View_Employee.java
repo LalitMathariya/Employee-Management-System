@@ -69,7 +69,8 @@ public void actionPerformed(ActionEvent e) {
 	if(e.getSource()==b1) 
 	{
 	f.setVisible(false);
-	new HomePage();	}
+	new HomePage();	
+	}
 	
 	
 }
